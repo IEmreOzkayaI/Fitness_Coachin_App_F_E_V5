@@ -1,0 +1,178 @@
+* {
+  font-family: "Bungee", cursive;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+}
+
+.carousel-inner {
+  height: 90vh;
+}
+.carousel img {
+  width: 90%;
+}
+
+.package-card {
+  height: auto;
+  background: transparent;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.package-card :hover::after {
+  cursor: pointer;
+  content: "incele";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  color: #fff;
+  font-size: 2rem;
+}
+
+.package-content .card img {
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 0;
+}
+
+.card-body-content {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.carousel-caption {
+  margin-bottom: 5rem;
+}
+
+ul {
+  text-align: justify;
+}
+
+small {
+  text-align: justify;
+}
+
+// .border-primary {
+//   border-color: #d90429 !important;
+// }
+// .bg-primary,
+// .btn-primary {
+//   background-color: #d90429 !important;
+//   border-color: #d90429;
+// }
+
+// .btn-outline-primary {
+//   color: #d90429;
+//   background-color: #fff;
+//   border-color: #d90429;
+// }
+
+#about-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#about {
+  border-radius: 5px;
+  background-image: url(../img/about.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+
+#packages {
+  border-radius: 5px;
+  background-image: url(../img/bg-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#upper {
+  position: sticky;
+  left: 97%;
+  bottom: 0.1rem;
+  z-index: 9999;
+}
+
+#upper i {
+  font-size: 3rem;
+}
+
+#upper i:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1rem;
+  }
+  small {
+    font-size: 0.7rem;
+  }
+  #about-container {
+    height: auto;
+  }
+  #about {
+    height: auto;
+    small {
+      font-size: 0.6rem;
+    }
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  #packages-container #packages .container {
+    margin-top: 5rem;
+  }
+
+  #packages {
+    .package-btn {
+      p {
+        font-size: 0.6rem;
+      }
+      li {
+        font-size: 0.6rem;
+        padding: 0.4rem;
+      }
+    }
+
+    .package-content {
+      .card .modal li,
+      .card .modal p {
+        font-size: 0.2rem;
+      }
+    }
+  }
+
+  #transferCarousel,
+  #carouselSection {
+    height: 30vh;
+    .carousel-inner {
+      height: 30vh;
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 200px;
+      }
+    }
+  }
+}
